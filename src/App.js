@@ -1,29 +1,57 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Numpad from './components/Numpad';
-import Operator from './components/Operator';
+
 
 function App() {
   const [theNumber, setNumber] = useState('');
-
-  const inputNum = (num) => setNumber(theNumber + num); //{} here, besides function blocks are pass properties (info) to other levels and components
-  const inputOp = (oper) => {
-    if(oper === '+') {
-      const savedNum = parseFloat(theNumber);
+  const [history, setHistory] = useState([]);
+  const [actExpression, setExpression] = useState('');
+  const inputNum = (num) => {
+    console.log(num);
+    if (num ==='+' || num ==='-' || num==='*'|| num==='/') {
+      setExpression(actExpression + num);
+      setNumber(num);
+    } else if (theNumber !== '' && actExpression === '') {
+      setExpression(num);
+      setNumber(num);
+    }
+    else {
+      setExpression(actExpression + num);
+      setNumber(theNumber + num);
+    }
+    }; //{} here, besides function blocks are pass properties (info) to other levels and components
+  
+  const operatorEval = () => {
+    let varEval; 
+    try {
+      varEval = eval(actExpression).toFixed(2); 
+      setHistory([...history, theNumber]);
+    } catch (err) {
+      varEval = ""; 
+    } 
+    setNumber(varEval);
+    setExpression('');
+  };
+  const removeNum = (option) => {
+    if (option === 'Del') {
+      try {
+        setNumber(theNumber.slice(0, theNumber.length-1))
+        setExpression(actExpression.slice(0, actExpression.length-1))
+      } catch(err) {
+        setNumber('');
+      }
+    } else { 
       setNumber('');
-      console.log(savedNum);
-      //check later if theNumber without no inputs will it pretend to add/sub/divide with 0 or give an error due to no input
+      setExpression('');
     }
   }
   return (
     <div className="container">
       <Header num={ theNumber } setNum= { setNumber }/>
       <ul>
-        <Numpad inputNum={inputNum}/>
+        <Numpad inputNum={inputNum} operatorEval={operatorEval} removeNum = {removeNum}/>
       </ul>
-      <div>
-        <Operator inputOp={inputOp}/>
-      </div>
     </div>
   );
 }

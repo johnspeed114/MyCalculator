@@ -1,10 +1,11 @@
-function Operator ({inputOp}) {
+function Operator ({inputOp, outputOp}) {
     const eachOperators = ['+', '-', '*', '÷'];
 
     return (
         <>
             {eachOperators.map((operator) => 
-                {return (<button onClick= {() => inputOp(operator)}>{operator}</button>)})}
+                {return (<button onClick= {(operator) => inputOp(operator)}>{operator}</button>)})}
+            <button onClick {...(num) => outputOp(num)}>{'='}</button>
         </>
     )
 }

@@ -1,23 +1,22 @@
 [] write new css code for the webpage on index.css
-[] find all the functions needed for the calculator as components
+
 [] align the css and functions of components together
 
 ---functions---
-[] store values
-[] add functions
-[] substract functions
-[] multiply function
-[] divide function
-[] operate() function occurs when clicking the equal button
-[] assign button for each number
+[x] store values
+[x] add functions
+[x] substract functions
+[x] multiply function
+[x] divide function
+[x] operate() function occurs when clicking the equal button
+[x] assign button for each number
 [x] input box for number
-[] clear button to clear numbers
-[] round the decimals tp the billionth place
-[] if divide by 0 give an error and reset
-[] evaluate numbers 2 pairs ONLY!!!
+[x] clear button to clear numbers and delete button
+[x] round the decimals tp thetenth
+[x] if divide by 0 give an error and reset
+[x] evaluate numbers 2 pairs ONLY!!!
 [] continue to calculate as long you use the operator like 2+ 4-5*23=answer
- 
-[] Keybroad support
+[] When click operator the thenumber state should revert to empty then calculate the expression   
 
 
  --NOTE--
