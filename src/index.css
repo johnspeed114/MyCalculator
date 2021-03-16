@@ -13,18 +13,22 @@ body {
   margin: 0;
   font-family: 'digital-dream', sans-serif;
     /* these two below are experiments that may or may not work */
+  background: #F6F6F6;
+  padding-bottom: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-  /* max-width: 500px; */
-  margin: 30px auto;
+  max-width: 400px;
+  margin: 50px auto;
   overflow: auto;
-  min-height: 600px;
+  min-height: 450px;
   padding: 0px;
-  padding-top: 0px;
-  background-color: rgb(129, 170, 204);
+  padding-top: 2px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 3px;
+  background-color: rgb(177, 213, 243);
 }
 
 .header {
@@ -32,16 +36,115 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0px;
+  margin-left: 20px;
   padding-top: 0px;
+  position: relative;
 }
 
-#mainInput {
+.mainInput {
   display: flex;
-  flex: 0 1 auto; 
-  width: 75%;
+  flex: 0 1 auto;
+  width: 80%;
   height: 35%;
   font-family: 'digital-dream';
   font-size: 4em;
   margin-left: 0px;
   border-radius: 0px;
 }
+
+#previous {
+  position: absolute;
+  top: 0;
+  right: 11%;
+  z-index: 2;
+  top: 22%;
+  height: 20px;
+}
+
+#next {
+  position: absolute;
+  top: 0;
+  right: 11%;
+  z-index: 2;
+  top: 50%;
+  height: 20px;
+}
+
+.numpadContainer {
+  padding: 20px;
+  padding-top: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.numpad {
+  background: rgba(0, 0, 0, 0.5); /* light background with opacity 50% */
+  border: 1px solid #111; /* black border */
+  padding: 20px;
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+}
+
+.numpad:nth-child(13){
+  grid-column: span 2;
+}
+
+.operators {
+  background: rgba(0, 0, 0, 0.5); /* light background with opacity 50% */
+  border: 1px solid #111; /* black border */
+  padding: 20px;
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+}
+
+.firstLine {
+  display: grid;
+  padding: 20px;
+  padding-bottom: 10px;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+.equals {
+  background: rgba(33, 37, 228, 0.527); /* light background with opacity 50% */
+  border: 1px solid #111; /* black border */
+  padding: 20px;
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+  grid-column: span 2;
+
+}
+
+.firstLine .deleteButtons1 {
+  background: rgba(255, 44, 44, 0.5); /* light background with opacity 50% */
+  border: 1px solid #111; /* black border */
+  padding: 20px;
+
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+
+  margin-right: 2px;
+
+}
+
+.firstLine .deleteButtons2 {
+  background: rgba(255, 0, 0, 0.877); /* light background with opacity 50% */
+  border: 1px solid #111; /* black border */
+  padding: 20px;
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+  margin-right: 5px;
+
+}
+
+

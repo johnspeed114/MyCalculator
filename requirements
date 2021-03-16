@@ -15,7 +15,7 @@
 [x] round the decimals tp thetenth
 [x] if divide by 0 give an error and reset
 [x] evaluate numbers 2 pairs ONLY!!!
-[] continue to calculate as long you use the operator like 2+ 4-5*23=answer
+[x] continue to calculate as long you use the operator like 2+ 4-5*23=answer
 [] When click operator the thenumber state should revert to empty then calculate the expression   
 
 
