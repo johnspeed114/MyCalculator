@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/myCalculator/static/css/main.3e16231c.chunk.css",
+    "main.js": "/myCalculator/static/js/main.344cb083.chunk.js",
+    "main.js.map": "/myCalculator/static/js/main.344cb083.chunk.js.map",
+    "runtime-main.js": "/myCalculator/static/js/runtime-main.9c694f8f.js",
+    "runtime-main.js.map": "/myCalculator/static/js/runtime-main.9c694f8f.js.map",
+    "static/js/2.3f24fdcd.chunk.js": "/myCalculator/static/js/2.3f24fdcd.chunk.js",
+    "static/js/2.3f24fdcd.chunk.js.map": "/myCalculator/static/js/2.3f24fdcd.chunk.js.map",
+    "static/js/3.7f518e38.chunk.js": "/myCalculator/static/js/3.7f518e38.chunk.js",
+    "static/js/3.7f518e38.chunk.js.map": "/myCalculator/static/js/3.7f518e38.chunk.js.map",
+    "index.html": "/myCalculator/index.html",
+    "static/css/main.3e16231c.chunk.css.map": "/myCalculator/static/css/main.3e16231c.chunk.css.map",
+    "static/js/2.3f24fdcd.chunk.js.LICENSE.txt": "/myCalculator/static/js/2.3f24fdcd.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/myCalculator/static/media/digital-dream.narrow.90ce20be.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c694f8f.js",
+    "static/js/2.3f24fdcd.chunk.js",
+    "static/css/main.3e16231c.chunk.css",
+    "static/js/main.344cb083.chunk.js"
+  ]
+}
